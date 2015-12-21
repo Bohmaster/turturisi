@@ -115,21 +115,21 @@ myApp.controller('AdminController', function($scope, $http, $window, Novedad, Ar
   $scope.download = function(name) {
     console.log($scope.eaton);
     if (name === 'eaton') {
-      $window.location.assign('http://179.43.123.169:3000/api/containers/files/download/' + $scope.eaton.imagen);
+      $window.location.assign('http://179.43.123.169:3001/api/containers/files/download/' + $scope.eaton.imagen);
     } else if (name === "zf") {
-      $window.location.assign('http://179.43.123.169:3000/api/containers/files/download/' + $scope.zf.imagen);
+      $window.location.assign('http://179.43.123.169:3001/api/containers/files/download/' + $scope.zf.imagen);
     }
   };
 
   $scope.auth = function() {
       console.log('auth');
       var pw = prompt("Por favor ingrese la contraseña");
-      if (pw == "asd") {
-        window.location.assign('http://179.43.123.169:3000/api/containers/files/download/' + $scope.lista.imagen);
+      if (pw == "turtuadmin") {
+        window.location.assign('http://179.43.123.169:3001/admin.html');
       } else if (pw == "turtu14") {
-        window.location.assign('http://179.43.123.169:3000/admin.html');
+        window.location.assign('http://179.43.123.169:3001/api/containers/files/download/' + $scope.lista.imagen);
       } else if (pw == "TURTU14") {
-        window.location.assign('http://179.43.123.169:3000/admin.html');
+        window.location.assign('http://179.43.123.169:3001/api/containers/files/download/' + $scope.lista.imagen);
       }
   };
 
