@@ -353,6 +353,8 @@ module.factory(
          *
          *  - `file` – `{string=}` - 
          *
+         *  - `req` – `{object=}` - 
+         *
          *  - `res` – `{object=}` - 
          *
          * @param {function(Object,Object)=} successCb
@@ -406,6 +408,45 @@ module.factory(
          * </em>
          */
         "create": {
+          url: urlBase + "/containers",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Container#createMany
+         * @methodOf lbServices.Container
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Container` object.)
+         * </em>
+         */
+        "createMany": {
+          isArray: true,
           url: urlBase + "/containers",
           method: "POST"
         },
@@ -956,6 +997,9 @@ module.factory(
          * </em>
          */
         "prototype$__findById__accessTokens": {
+          params: {
+          'fk': '@fk'
+          },
           url: urlBase + "/Users/:id/accessTokens/:fk",
           method: "GET"
         },
@@ -988,6 +1032,9 @@ module.factory(
          * This method returns no data.
          */
         "prototype$__destroyById__accessTokens": {
+          params: {
+          'fk': '@fk'
+          },
           url: urlBase + "/Users/:id/accessTokens/:fk",
           method: "DELETE"
         },
@@ -1027,6 +1074,9 @@ module.factory(
          * </em>
          */
         "prototype$__updateById__accessTokens": {
+          params: {
+          'fk': '@fk'
+          },
           url: urlBase + "/Users/:id/accessTokens/:fk",
           method: "PUT"
         },
@@ -1202,6 +1252,45 @@ module.factory(
          * </em>
          */
         "create": {
+          url: urlBase + "/Users",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.User#createMany
+         * @methodOf lbServices.User
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `User` object.)
+         * </em>
+         */
+        "createMany": {
+          isArray: true,
           url: urlBase + "/Users",
           method: "POST"
         },
@@ -2008,6 +2097,45 @@ module.factory(
 
         /**
          * @ngdoc method
+         * @name lbServices.Novedad#createMany
+         * @methodOf lbServices.Novedad
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Novedad` object.)
+         * </em>
+         */
+        "createMany": {
+          isArray: true,
+          url: urlBase + "/Novedads",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
          * @name lbServices.Novedad#upsert
          * @methodOf lbServices.Novedad
          *
@@ -2555,6 +2683,45 @@ module.factory(
          * </em>
          */
         "create": {
+          url: urlBase + "/Archivos",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Archivo#createMany
+         * @methodOf lbServices.Archivo
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Archivo` object.)
+         * </em>
+         */
+        "createMany": {
+          isArray: true,
           url: urlBase + "/Archivos",
           method: "POST"
         },
@@ -3183,6 +3350,18 @@ module
      */
     this.setUrlBase = function(url) {
       urlBase = url;
+    };
+
+    /**
+     * @ngdoc method
+     * @name lbServices.LoopBackResourceProvider#getUrlBase
+     * @methodOf lbServices.LoopBackResourceProvider
+     * @description
+     * Get the URL of the REST API server. The URL provided
+     * to the code generator (`lb-ng` or `grunt-loopback-sdk-angular`) is used.
+     */
+    this.getUrlBase = function() {
+      return urlBase;
     };
 
     this.$get = ['$resource', function($resource) {

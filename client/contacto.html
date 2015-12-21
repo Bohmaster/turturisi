@@ -18,6 +18,7 @@ S/cargo: 0800-5550531">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/webflow.css">
   <link rel="stylesheet" type="text/css" href="css/turturici.webflow.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script>
     WebFont.load({
@@ -43,7 +44,7 @@ S/cargo: 0800-5550531">
       <div class="w-container contheader">
         <a href="index.html" class="w-nav-brand brand"><img src="images/logoSolo.jpg">
         </a>
-        <div class="txt">A.S.TURTURICI S.A.</div>
+        <div class="txt" style="margin-top: 15px;">A.S.TURTURICI S.A.</div>
         <div class="txt subt">REPUESTOS PARA TRANSMISION</div>
         <nav role="navigation" class="w-nav-menu navmenu"><a href="index.html" class="w-nav-link navlink">inicio</a><a href="nuestra-empresa.html" class="w-nav-link navlink">nuestra empresa</a><a href="productos.html" class="w-nav-link navlink">productos</a><a href="servicios.html" class="w-nav-link navlink">servicios</a><a href="novedades.html" class="w-nav-link navlink">novedades</a><a href="contacto.html" class="w-nav-link navlink">contacto</a>
         </nav>
@@ -59,10 +60,11 @@ S/cargo: 0800-5550531">
         <div class="divtitulo">
           <h2 class="titpagina">Contacto</h2><img width="45" src="images/logo.png" class="imgtitulo">
         </div>
-        <div class="w-row">
+        <div class="w-row" ng-controller="FormController">
           <div class="w-col w-col-6">
             <blockquote class="blockq"><strong>A.S. TURTURICI S.A.<br>San Martin 2529 S2000FTQ Rosario | Santa Fé | Argentina<br>Tel: (0341) 4858600 (líneas rotativas)<br>Fax: (0341) 4850543 | S/cargo: 0800-5550531<br><a class="inkmail" href="mailto:ventas@asturturici.com.ar?subject=Email%20desde%20sitio">ventas@asturturici.com.ar</a><br></strong>
-            </blockquote>
+            <span ng-click="openInfo()" class="w-button botondescargar lista" style="margin-bottom: 13px; position: absolute; right: 10px; bottom: 8px;">INTERNOS</span>
+            </blockquote>            
             <blockquote class="blockq"><strong>Horario: Lunes a viernes de 8:00 a 12:00 hs y de 14:30 a 18:00 hs. Sábados de 8:00 a 12:00 hs.<br></strong>
             </blockquote>
             <div data-widget-latlng="-32.967266,-60.64188" data-widget-style="roadmap" data-widget-zoom="12" data-widget-tooltip="A.S. TURTURICI S.A." data-disable-scroll="1" data-disable-touch="1" class="w-widget w-widget-map mapa"></div>
@@ -87,7 +89,7 @@ S/cargo: 0800-5550531">
               </div>
             </div>
             <blockquote class="blockq">Para solicitar una cuenta corriente deberá imprimir y completar el siguiente formulario, el cual lo puede enviar via mail o acercarse a nuestra sucursal. Nos estaremos comunicando con usted a la brevedad.</blockquote>
-              <a href="http://localhost:3000/api/containers/files/download/formulario.pdf" target="_blank" class="w-button botondescargar lista">Descargar FORMULARIO</a>
+              <a href="http://138.219.41.147:3000/api/containers/files/download/formulario.pdf" target="_blank" class="w-button botondescargar lista">Descargar FORMULARIO</a>
           </div>
         </div>
       </div>
@@ -154,6 +156,17 @@ S/cargo: 0800-5550531">
   <script src="js/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="js/app.js"></script>
   <script src="js/lb-services.js"></script>
+  <script>
+    angular.module('app')
+      .controller('FormController', function($scope, $uibModal) {
+        $scope.openInfo = function() {
+              $uibModal.open({
+                templateUrl: 'info.html',
+                size: 'md'
+              }); 
+        };
+      });
+  </script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 </body>
 </html>

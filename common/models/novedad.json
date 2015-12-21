@@ -5,7 +5,7 @@
   "idInjection": false,
   "properties": {
     "fecha": {
-      "type": "date"
+      "type": "string"
     },
     "descripcion": {
       "type": "string"

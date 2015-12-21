@@ -12,7 +12,6 @@ myApp.controller('AdminController', function($scope, $http, $window, Novedad, Ar
         order: 'id DESC'
       }
     },function(data) {
-      console.log(data);
       $scope.novedades = data;
     });
   }
@@ -100,7 +99,7 @@ myApp.controller('AdminController', function($scope, $http, $window, Novedad, Ar
   $scope.removeSelected = function() {
     angular.forEach($scope.toDelete, function(value, key) {
       console.log(key, value);
-      $http.delete('http://localhost:3000/api/Novedads/' + value)
+      $http.delete('http://138.219.41.147:3000/api/Novedads/' + value)
         .success(function(data) {
           getNovedades();
         })
@@ -115,9 +114,9 @@ myApp.controller('AdminController', function($scope, $http, $window, Novedad, Ar
   $scope.download = function(name) {
     console.log($scope.eaton);
     if (name === 'eaton') {
-      $window.location.assign('http://localhost:3000/api/containers/files/download/' + $scope.eaton.imagen);
+      $window.location.assign('http://138.219.41.147:3000/api/containers/files/download/' + $scope.eaton.imagen);
     } else if (name === "zf") {
-      $window.location.assign('http://localhost:3000/api/containers/files/download/' + $scope.zf.imagen);
+      $window.location.assign('http://138.219.41.147:3000/api/containers/files/download/' + $scope.zf.imagen);
     }
   };
 
@@ -125,9 +124,9 @@ myApp.controller('AdminController', function($scope, $http, $window, Novedad, Ar
       console.log('auth');
       var pw = prompt("Por favor ingrese la contraseña");
       if (pw == "asd") {
-        window.location.assign('http://localhost:3000/api/containers/files/download/' + $scope.lista.imagen);
+        window.location.assign('http://138.219.41.147:3000/api/containers/files/download/' + $scope.lista.imagen);
       } else if (pw == "admin") {
-        window.location.assign('http://localhost:3000/admin.html');
+        window.location.assign('http://138.219.41.147:3000/admin.html');
       }
   };
 
