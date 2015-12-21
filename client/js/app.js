@@ -1,4 +1,6 @@
 'use strict';
+
+var api = 'http://179.43.123.169:3001';
 var myApp = angular.module('app', [
 	'ui.bootstrap',
   'ngResource',
@@ -147,7 +149,7 @@ myApp.controller('AdminController', function($scope, $http, $window, Novedad, Ar
 
      console.log(fd);
 
-     $http.post('/api/containers/files/upload',
+     $http.post(api + '/api/containers/files/upload',
         fd, {
           transformRequest: angular.identity,
           headers: {'Content-Type': undefined}
