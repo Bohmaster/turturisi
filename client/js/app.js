@@ -127,7 +127,7 @@ myApp.controller('AdminController', function($scope, $http, $window, Novedad, Ar
       if (pw == "asd") {
         window.location.assign('http://localhost:3000/api/containers/files/download/' + $scope.lista.imagen);
       } else if (pw == "admin") {
-        window.location.assign('http://localhost:3000/admin.html');
+        window.location.assign('http://179.43.123.169:3000/admin.html');
       }
   };
 
