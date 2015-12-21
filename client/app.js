@@ -114,19 +114,19 @@ myApp.controller('AdminController', function($scope, $http, $window, Novedad, Ar
   $scope.download = function(name) {
     console.log($scope.eaton);
     if (name === 'eaton') {
-      $window.location.assign('http://138.219.41.147:3000/api/containers/files/download/' + $scope.eaton.imagen);
+      $window.location.assign('http://138.219.41.147:3001/api/containers/files/download/' + $scope.eaton.imagen);
     } else if (name === "zf") {
-      $window.location.assign('http://138.219.41.147:3000/api/containers/files/download/' + $scope.zf.imagen);
+      $window.location.assign('http://138.219.41.147:3001/api/containers/files/download/' + $scope.zf.imagen);
     }
   };
 
   $scope.auth = function() {
       console.log('auth');
       var pw = prompt("Por favor ingrese la contraseña");
-      if (pw == "asd") {
-        window.location.assign('http://138.219.41.147:3000/api/containers/files/download/' + $scope.lista.imagen);
-      } else if (pw == "admin") {
-        window.location.assign('http://138.219.41.147:3000/admin.html');
+      if (pw == "turtu14" || "TURTU14") {
+        window.location.assign('http://138.219.41.147:3001/api/containers/files/download/' + $scope.lista.imagen);
+      } else if (pw == "adminturtu") {
+        window.location.assign('http://138.219.41.147:3001/admin.html');
       }
   };
 

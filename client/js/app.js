@@ -126,7 +126,9 @@ myApp.controller('AdminController', function($scope, $http, $window, Novedad, Ar
       var pw = prompt("Por favor ingrese la contraseña");
       if (pw == "asd") {
         window.location.assign('http://179.43.123.169:3000/api/containers/files/download/' + $scope.lista.imagen);
-      } else if (pw == "admin") {
+      } else if (pw == "turtu14") {
+        window.location.assign('http://179.43.123.169:3000/admin.html');
+      } else if (pw == "TURTU14") {
         window.location.assign('http://179.43.123.169:3000/admin.html');
       }
   };
